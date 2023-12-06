@@ -1,0 +1,183 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'TTNorms', sans-serif;
+    background: linear-gradient(90deg, #fff7ad, #ffa9f9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* Bring it to the top left corner */
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    /* Add an animation so that it comes down from the top and fades in */
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}
+
+.logo {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+}
+
+.brand {
+    color: #fff;
+}
+
+
+.container {
+    text-align: center;
+    padding-right: 980px;
+    padding-bottom: 30px;
+    /* Add an animation so that it comes from the left and fades in */
+    animation: slideRight 1.8s ease;
+    
+}
+
+.text-content {
+    text-align: left;
+}
+
+
+h1 {
+    font-size: 5.7em; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+}
+
+p {
+    font-size: 2.1em; /* Adjust the font size as needed */
+    color: #555;
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px; /* Increase the padding values as needed */
+    margin-top: 20px;
+    font-size: 20px; /* Increase the font size as needed */
+    text-decoration: none;
+    color: rgb(29, 21, 21);
+    background-color: #FFF;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fdadd2;
+}
+
+.product-image {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 50%;
+    right: 400px;
+    transform: translateY(-50%);
+    /* animation: slideLeft 0.56s ease; */
+}
+
+.product-image img {
+    width: 600px;
+    /* Move the image to the left a little bit */
+    transform: translateX(-200px);
+}
+
+
+/* About section */
+.explanation-box {
+    background-color: #fff; /* Background color of the box */
+    padding: 20px; /* Padding inside the box */
+    margin-top: 20px; /* Margin at the top of the box */
+    border-radius: 10px; /* Border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    font-size: 1.2rem;
+    font-family: 'TTNorms', sans-serif;
+}
+
+.about-container {
+    /* Put it at the top center of the page and make it come down from the screen */
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: slideLeft 0.5s ease; */
+}
+
+.list {
+    text-align: left;
+    margin-top: 20px;
+    
+}
+
+.explanation-box p {
+    font-size: 1.2em; /* Adjust the font size inside the box */
+    color: #555;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media only screen and (max-width: 768px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .container {
+        padding-right: 20px;
+    }
+
+    .product-image {
+        right: 20px;
+    }
+}
